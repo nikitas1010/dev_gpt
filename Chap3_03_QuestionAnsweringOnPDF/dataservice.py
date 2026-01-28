@@ -85,7 +85,7 @@ class DataService():
                           for i in range(0, len(text_page), chunk_length)])
 
         # Create embeddings
-        response = client.embeddings.create(model='text-embedding-ada-002', input=chunks)
+        response = client.embeddings.create(model='text-embedding-3-small', input=chunks)
         return [{'id': value.index, 'vector':value.embedding, 'text':chunks[value.index]} for value in response.data]
 
     def search_redis(self,
@@ -99,7 +99,7 @@ class DataService():
                      ):
         # Creates embedding vector from user query
         embedded_query = client.embeddings.create(input=user_query,
-                                                 model="text-embedding-ada-002").data[0].embedding
+                                                 model="text-embedding-3-small").data[0].embedding
         # Prepare the Query
         base_query = f'{hybrid_fields}=>[KNN {k} @{vector_field} $vector AS vector_score]'
         query = (

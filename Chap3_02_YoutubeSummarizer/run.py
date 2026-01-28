@@ -12,7 +12,7 @@ with open("files/transcript.txt", "r") as f:
 
 # Call the openai ChatCompletion endpoint, with the ChatGPT model
 response = client.chat.completions.create(
-    model="gpt-3.5-turbo",
+    model="gpt-4o-mini",
     messages=[{"role": "user",
                "content": f"Summarize the following video transcript.: \n{transcript}"}])
 

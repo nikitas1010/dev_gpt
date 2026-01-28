@@ -7,7 +7,7 @@ class ResponseService():
         pass
      
      def generate_response(self, facts, user_question):
-         response = client.chat.completions.create(model="gpt-3.5-turbo",
+         response = client.chat.completions.create(model="gpt-4o-mini",
          messages=[
                {"role": "user", "content": 'Based on the FACTS, give an answer to the QUESTION.'+ 
                 f'QUESTION: {user_question}. FACTS: {facts}'}

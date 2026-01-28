@@ -6,7 +6,7 @@ from openai import OpenAI
 client = OpenAI()
 
 # For GPT 3.5 Turbo, the endpoint is ChatCompletion
-response = client.chat.completions.create(model="gpt-3.5-turbo",
+response = client.chat.completions.create(model="gpt-4o-mini",
 # Conversation as a list of messages.
 messages=[
     {"role": "system", "content": "You are a helpful teacher."},

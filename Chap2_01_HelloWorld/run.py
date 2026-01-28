@@ -9,7 +9,7 @@ client = OpenAI()
 # Make sure the environment variable OPENAI_API_KEY is set.
 
 # Call the openai ChatCompletion endpoint, with th ChatGPT model
-response = client.chat.completions.create(model="gpt-3.5-turbo",
+response = client.chat.completions.create(model="gpt-4o-mini",
 messages=[
       {"role": "user", "content": "Hello World!"}
   ])

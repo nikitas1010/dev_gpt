@@ -15,7 +15,7 @@ Let's think step by step.
 Answer: """
 prompt = PromptTemplate(template=template, input_variables=["question"])
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo")
+llm = ChatOpenAI(model_name="gpt-4o-mini")
 llm_chain = LLMChain(prompt=prompt, llm=llm)
 
 question = """ What is the population of the capital of the country where the
@@ -38,7 +38,7 @@ agent_executor.invoke({"input": question})
 
 
 
-chatbot_llm = OpenAI(model_name='gpt-3.5-turbo-instruct')
+chatbot_llm = OpenAI(model_name='gpt-4o-mini')
 chatbot = ConversationChain(llm=chatbot_llm , verbose=True)
 chatbot.predict(input='Hello')
 chatbot.predict(input='Can I ask you a question? Are you an AI?')

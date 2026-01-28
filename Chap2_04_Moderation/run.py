@@ -6,7 +6,7 @@ from openai import OpenAI
 client = OpenAI()
 
 # Call the openai Moderation endpoint, with the text-moderation-latest model
-response = client.moderations.create(model="text-moderation-latest",
+response = client.moderations.create(model="omni-moderation-latest",
 input="I want to kill my neighbor.")
 
 # Extract the response

@@ -19,7 +19,7 @@ with open(document_path, 'r') as file:
     '''
 
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": f'{prompt} Document: {document}'}],
         response_format={"type": "json_object"})
     print(response.choices[0].message.content)
